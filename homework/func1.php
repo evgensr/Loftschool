@@ -4,6 +4,8 @@
  * Date: 9/12/15
  * Time: 2:48 AM
  */
+set_time_limit(1);
+
 
 
 function sectionOut($arr, $show=0)
@@ -118,8 +120,13 @@ function rangeOfOddNumbers($begin, $end)
 
 function chackPalindrome($str)
 {
-    $str = mb_convert_case(trim($str), MB_CASE_TITLE, 'UTF-8');
-    if (strrev($str)==$str) return true;
+    $str = mb_convert_case(trim($str), MB_CASE_UPPER, 'UTF-8');
+    $newStr='';
+    for($i=mb_strlen($str); --$i>=0; )
+    {
+        $newStr .=mb_substr($str,$i,1);
+    }
+    if ($newStr==$str) return true;
     return false;
 }
 
