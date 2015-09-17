@@ -4,8 +4,6 @@
  * Date: 9/12/15
  * Time: 2:48 AM
  */
-set_time_limit(1);
-
 
 
 function sectionOut($arr, $show=0)
