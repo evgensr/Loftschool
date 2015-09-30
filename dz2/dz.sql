@@ -20,7 +20,6 @@ CREATE TABLE IF NOT EXISTS `basket` (
   PRIMARY KEY (`id`),
   KEY `FK_basket_products` (`id_product`),
   KEY `FK34` (`price`),
-  CONSTRAINT `FK34` FOREIGN KEY (`price`) REFERENCES `products` (`price`),
   CONSTRAINT `FK_basket_orders` FOREIGN KEY (`id`) REFERENCES `orders` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `FK_basket_products` FOREIGN KEY (`id_product`) REFERENCES `products` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='Состав заказа (рассыпуха)';
